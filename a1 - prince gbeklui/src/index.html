@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 1</title>
+    <h1>Assignment 1 </h1>
+    <h2>Prince Gbeklui </h2>
+    <h2>Instructor: Sukhbir Tatla</h2>
+    <hr>
+</head>
+<body>
+<form action  = "/action_page.php" method="get">
+
+    <p>
+<label>Text box</label>
+<input type = "text" id = "myText" value = " " />
+</p>
+
+
+<input type = "button" id = "celToFar" type = number value = "Celsius to Fahrenheit"
+       oninput="temperatureConverter(myText)" onchange="temperatureConverter(myText)"/>
+<input type = "button" id = "farToCel" type = number value = "Fahrenheit to Celsius"
+       oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)" />
+    <script>
+
+        function temperatureConverter(myText) {
+  myText = parseFloat(valNum);
+  document.getElementById("result").innerHTML=(valNum-32)/1.8;
+}
+    </script>
+    <br>
+
+<input type = "button" id = "ftToMt" type = number value = "Feet to Meters" />
+<input type = "button" id = "mtToFt" type = number value = "Meters to Feet" />
+<br>
+
+<input type = "button" id = "inToCeni" type = number value = "Inches to Centimeters" />
+<input type = "button" id = "centiToIn" type = number value = "Centimeters to Inches" />
+<br>
+
+<input type = "button" id = "lbsToKilo"  type = number value = "Pounds to Kilograms" />
+<input type = "button" id = "kiloToLbs"  type = number value = "Kilograms to Pounds" />
+    <br>
+
+    <button type = "reset" value = "reset"> Reset </button>
+
+    <P> RESULT <span id = result> </span> </P>
+</form>
+
+</body>
+</html>
+<!-- Prince Jr gbeklui - Assignment 1 - Feb 1 ,2021 >
+<! you cant make unobtrusive script in intellij with the free version and its the only ide i know how to use
+unless we can make it in a html file ,honestly you never even showed us how >
